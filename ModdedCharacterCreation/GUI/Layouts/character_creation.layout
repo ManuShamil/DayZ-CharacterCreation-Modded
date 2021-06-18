@@ -267,7 +267,7 @@ FrameWidgetClass character_creation_root {
            hexactsize 0
            vexactsize 0
            {
-            TextWidgetClass character_head_setting_label0 {
+            TextWidgetClass character_hat_setting_label {
              ignorepointer 1
              size 1 0.55
              valign center_ref
