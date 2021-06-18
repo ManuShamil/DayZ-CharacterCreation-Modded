@@ -10,7 +10,6 @@
         "game": [
         ],
         "world": [
-            "ModdedCharacterCreation/Scripts/4_World"
         ],
         "mission": [
 			"ModdedCharacterCreation/Scripts/5_Mission"
