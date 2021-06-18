@@ -232,6 +232,83 @@ FrameWidgetClass character_creation_root {
         }
        }
       }
+      ButtonWidgetClass character_hat_button {
+       position 0 0
+       size 1 30
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style Empty
+       "next up" "character_gender_button"
+       "next down" "character_top_button"
+       {
+        GridSpacerWidgetClass character_hat_setting {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         "no focus" 1
+         Padding 0
+         Margin 0
+         "Size To Content H" 1
+         Columns 2
+         Rows 1
+         {
+          FrameWidgetClass character_hat_setting_panel {
+           ignorepointer 1
+           position 0 0
+           size 0.4 0.6
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass character_head_setting_label0 {
+             ignorepointer 1
+             size 1 0.55
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "HAT"
+             font "gui/fonts/sdf_MetronLight24"
+             "text offset" 15 0
+             "exact text" 0
+             "exact text size" 18
+             "text valign" center
+            }
+           }
+          }
+          FrameWidgetClass character_hat_setting_option {
+           ignorepointer 1
+           position 0 0
+           size 0.6 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+          }
+         }
+        }
+        PanelWidgetClass character_hat_setting_disable {
+         visible 0
+         ignorepointer 1
+         color 0.1569 0.1569 0.1569 0.902
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         style rover_sim_colorable
+        }
+       }
+      }
       ButtonWidgetClass character_head_button {
        position 0 0
        size 1 30
@@ -309,6 +386,83 @@ FrameWidgetClass character_creation_root {
         }
        }
       }
+      ButtonWidgetClass character_mask_button {
+       position 0 0
+       size 1 30
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style Empty
+       "next up" "character_gender_button"
+       "next down" "character_top_button"
+       {
+        GridSpacerWidgetClass character_mask_setting {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         "no focus" 1
+         Padding 0
+         Margin 0
+         "Size To Content H" 1
+         Columns 2
+         Rows 1
+         {
+          FrameWidgetClass character_mask_setting_panel {
+           ignorepointer 1
+           position 0 0
+           size 0.4 0.6
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass character_mask_setting_label {
+             ignorepointer 1
+             size 1 0.55
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "MASK"
+             font "gui/fonts/sdf_MetronLight24"
+             "text offset" 15 0
+             "exact text" 0
+             "exact text size" 18
+             "text valign" center
+            }
+           }
+          }
+          FrameWidgetClass character_mask_setting_option {
+           ignorepointer 1
+           position 0 0
+           size 0.6 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+          }
+         }
+        }
+        PanelWidgetClass character_mask_setting_disable {
+         visible 0
+         ignorepointer 1
+         color 0.1569 0.1569 0.1569 0.902
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         style rover_sim_colorable
+        }
+       }
+      }
       ButtonWidgetClass character_top_button {
        position 0 0
        size 1 30
@@ -373,6 +527,160 @@ FrameWidgetClass character_creation_root {
          }
         }
         PanelWidgetClass character_top_setting_disable {
+         visible 0
+         ignorepointer 1
+         color 0.1569 0.1569 0.1569 0.902
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         style rover_sim_colorable
+        }
+       }
+      }
+      ButtonWidgetClass character_gloves_button {
+       position 0 0
+       size 1 30
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style Empty
+       "next up" "character_gender_button"
+       "next down" "character_top_button"
+       {
+        GridSpacerWidgetClass character_gloves_setting {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         "no focus" 1
+         Padding 0
+         Margin 0
+         "Size To Content H" 1
+         Columns 2
+         Rows 1
+         {
+          FrameWidgetClass character_gloves_setting_panel {
+           ignorepointer 1
+           position 0 0
+           size 0.4 0.6
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass character_gloves_setting_label {
+             ignorepointer 1
+             size 1 0.55
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "GLOVES"
+             font "gui/fonts/sdf_MetronLight24"
+             "text offset" 15 0
+             "exact text" 0
+             "exact text size" 18
+             "text valign" center
+            }
+           }
+          }
+          FrameWidgetClass character_gloves_setting_option {
+           ignorepointer 1
+           position 0 0
+           size 0.6 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+          }
+         }
+        }
+        PanelWidgetClass character_gloves_setting_disable {
+         visible 0
+         ignorepointer 1
+         color 0.1569 0.1569 0.1569 0.902
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         style rover_sim_colorable
+        }
+       }
+      }
+      ButtonWidgetClass character_bag_button {
+       position 0 0
+       size 1 30
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       style Empty
+       "next up" "character_gender_button"
+       "next down" "character_top_button"
+       {
+        GridSpacerWidgetClass character_bag_setting {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         "no focus" 1
+         Padding 0
+         Margin 0
+         "Size To Content H" 1
+         Columns 2
+         Rows 1
+         {
+          FrameWidgetClass character_bag_setting_panel {
+           ignorepointer 1
+           position 0 0
+           size 0.4 0.6
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass character_bag_setting_label {
+             ignorepointer 1
+             size 1 0.55
+             valign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             text "BAG"
+             font "gui/fonts/sdf_MetronLight24"
+             "text offset" 15 0
+             "exact text" 0
+             "exact text size" 18
+             "text valign" center
+            }
+           }
+          }
+          FrameWidgetClass character_bag_setting_option {
+           ignorepointer 1
+           position 0 0
+           size 0.6 1
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+          }
+         }
+        }
+        PanelWidgetClass character_bag_setting_disable {
          visible 0
          ignorepointer 1
          color 0.1569 0.1569 0.1569 0.902
