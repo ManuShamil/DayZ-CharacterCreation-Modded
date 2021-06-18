@@ -1,0 +1,16 @@
+{
+    "comments": "for custom pbos with no pre existing templates",
+    "type": "pbo",
+    "path": "E:/SteamLibrary/steamapps/common/DayZ/!Workshop/@Basic Map/Addons/BasicMap.pbo",
+    "project_files": {
+        "game": [
+            "BasicMap/scripts/3_Game"
+        ],
+        "world": [
+            "BasicMap/scripts/4_World"
+        ],
+        "mission": [
+            "BasicMap/scripts/5_Mission"
+        ]
+    }
+}

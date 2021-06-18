@@ -1,0 +1,19 @@
+{
+    "comments": "for custom pbos with no pre existing templates",
+    "type": "pbo",
+    "path": "E:/SteamLibrary/steamapps/common/DayZ/!Workshop/@Basic Map/Addons/BasicMapDefine.pbo",
+    "project_files": {
+        "gameLib": [
+            "BasicMapDefine/scripts/Common"
+        ],
+        "game": [
+            "BasicMapDefine/scripts/Common"
+        ],
+        "world": [
+            "BasicMapDefine/scripts/Common"
+        ],
+        "mission": [
+            "BasicMapDefine/scripts/Common"
+        ]
+    }
+}

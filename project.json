@@ -1,0 +1,22 @@
+{
+    "name": "DayZ-CharacterCreation-Modded",
+    "game_dir": "C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp",
+    "profile": "DEV",
+    "project_files": {
+        "image": [],
+        "widget": [],
+        "core": [],
+        "gameLib": [],
+        "game": [
+        ],
+        "world": [
+            "ModdedCharacterCreation/Scripts/4_World"
+        ],
+        "mission": [
+			"ModdedCharacterCreation/Scripts/5_Mission"
+        ]
+    },
+    "dependencies": [
+
+    ]
+}
