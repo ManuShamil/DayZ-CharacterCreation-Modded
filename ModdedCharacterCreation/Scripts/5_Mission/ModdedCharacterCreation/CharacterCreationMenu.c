@@ -125,7 +125,7 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		return layoutRoot;
 	}
 
-	override void ~CharacterCreationMenu()
+	void ~CharacterCreationMenu()
 	{
 		m_BagSelector.m_OptionChanged.Remove( BagChanged );
 	}
