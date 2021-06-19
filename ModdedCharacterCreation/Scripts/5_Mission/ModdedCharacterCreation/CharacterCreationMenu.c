@@ -1,5 +1,7 @@
 modded class CharacterCreationMenu extends UIScriptedMenu
 {
+	protected ref OptionSelectorMultistateCharacterMenu		m_BagSelector;
+
 	override Widget Init()
 	{
 		#ifdef PLATFORM_CONSOLE
@@ -56,7 +58,8 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		m_TopSelector		= new OptionSelectorMultistateCharacterMenu( layoutRoot.FindAnyWidget( "character_top_setting_option" ), 0, null, false, DefaultCharacterCreationMethods.GetConfigAttachmentTypes(InventorySlots.BODY) );
 		m_BottomSelector	= new OptionSelectorMultistateCharacterMenu( layoutRoot.FindAnyWidget( "character_bottom_setting_option" ), 0, null, false, DefaultCharacterCreationMethods.GetConfigAttachmentTypes(InventorySlots.LEGS) );
 		m_ShoesSelector		= new OptionSelectorMultistateCharacterMenu( layoutRoot.FindAnyWidget( "character_shoes_setting_option" ), 0, null, false, DefaultCharacterCreationMethods.GetConfigAttachmentTypes(InventorySlots.FEET) );
-		
+		m_BagSelector		= new OptionSelectorMultistateCharacterMenu( layoutRoot.FindAnyWidget( "character_bag_setting_option" ), 0, null, false, DefaultCharacterCreationMethods.GetConfigAttachmentTypes(InventorySlots.BACK) );
+
 		PlayerBase scene_char = GetPlayerObj();
 		if( scene_char )
 		{
@@ -71,7 +74,11 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 			obj = scene_char.GetInventory().FindAttachment(InventorySlots.FEET);
 			if( obj )
 				m_ShoesSelector.SetValue( obj.GetType(), false );
-			
+
+			obj = scene_char.GetInventory().FindAttachment(InventorySlots.BACK);
+			if( obj )
+				m_BagSelector.SetValue( obj.GetType(), false );
+
 			m_SkinSelector.SetValue( scene_char.GetType() );
 		}
 		
@@ -80,6 +87,7 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		m_TopSelector.m_OptionChanged.Insert( TopChanged );
 		m_BottomSelector.m_OptionChanged.Insert( BottomChanged );
 		m_ShoesSelector.m_OptionChanged.Insert( ShoesChanged );
+		m_BagSelector.m_OptionChanged.Insert( BagChanged );
 		
 		#ifdef PLATFORM_PS4
 			string confirm = "cross";
@@ -115,5 +123,28 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		SetCharacter();
 		CheckNewOptions();
 		return layoutRoot;
+	}
+
+	override void ~CharacterCreationMenu()
+	{
+		super.~CharacterCreationMenu();
+		m_BagSelector.m_OptionChanged.Remove( BagChanged );
+	}
+
+	override void RandomizeCharacter()
+	{
+	
+		m_BagSelector.SetValue(GetGame().GetMenuDefaultCharacterData().GetAttachmentMap().Get(InventorySlots.BACK),false);
+
+		super.RandomizeCharacter();
+
+	}
+	
+	void BagChanged()
+	{
+		GetGame().GetMenuDefaultCharacterData().SetDefaultAttachment(InventorySlots.BACK,m_BagSelector.GetStringValue());
+		GetGame().GetMenuDefaultCharacterData().EquipDefaultCharacter(m_Scene.GetIntroCharacter().GetCharacterObj());
+		SetCharacterSaved(false);
+		//m_Scene.GetIntroCharacter().SetAttachment( m_BagSelector.GetStringValue(), InventorySlots.BACK );
 	}
 }
