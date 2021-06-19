@@ -127,7 +127,6 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 
 	override void ~CharacterCreationMenu()
 	{
-		super.~CharacterCreationMenu();
 		m_BagSelector.m_OptionChanged.Remove( BagChanged );
 	}
 
@@ -145,6 +144,5 @@ modded class CharacterCreationMenu extends UIScriptedMenu
 		GetGame().GetMenuDefaultCharacterData().SetDefaultAttachment(InventorySlots.BACK,m_BagSelector.GetStringValue());
 		GetGame().GetMenuDefaultCharacterData().EquipDefaultCharacter(m_Scene.GetIntroCharacter().GetCharacterObj());
 		SetCharacterSaved(false);
-		//m_Scene.GetIntroCharacter().SetAttachment( m_BagSelector.GetStringValue(), InventorySlots.BACK );
 	}
 }
